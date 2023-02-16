@@ -1,0 +1,108 @@
+body {  box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+.contenedor { width: 100%; 
+              margin: auto;}
+
+img {width: 100%;}
+
+.header__contenido {position: relative;
+                    z-index: 1000;}
+
+.logo {font-weight: 1000;
+        font-size: 20px;
+        margin: 15px;
+color: white;}
+
+.banner {height:60vh;
+        position: relative;
+        background-image: url("../img/header.jpg");
+         background-size:cover;
+        background-position:center;
+        background-attachment: fixed;
+        margin-top: -90px;
+background-position-y: -112px;}
+
+.banner__descripcion {position: absolute;
+     text-align: center;
+     color: white;
+     transform: translateX(-50%) translateY(-50%);
+     top:50%; left:50% ;
+     width: 100%;
+}
+
+.button__banner{background-color: rgb(17, 52, 209); border: none; padding: 1em; color: white; font-size: 15px; border: solid 2px}
+.button__banner:hover{border: solid 2px rgb(17, 52, 209); background: none;}
+
+.galeria h1 { font-size: 30px; text-align: center;}
+
+.galeria {margin: 15px;}
+
+.sucursales  {background-color: bisque;
+padding: 40px;}
+.sucursales h1 { text-align: center; font-size: 30px;}
+
+.sucursales__grid{display: grid; grid-gap:30px}
+
+.sucursal__columnma img {
+        border-radius: 50%; text-align: center;
+}
+.sucursal__columnma {text-align: center;}
+.info h1 {color: green; font-size: 30px}
+.info {text-align: center;}
+.info__columna{margin: 20px;}
+
+.info .contenedor {display: grid; 
+grid-gap: 10px;}
+
+.banner2 {height:60vh;
+        position: relative;
+        background-image: url("../img/header.jpg");
+         background-size:cover;
+        background-position:right;
+        background-attachment: fixed;
+        background-position-y: -2px;
+        color: white;}
+.banner2 h1{font-size: 28px;}
+.banner2__descripcion{position:absolute; width: 100%;
+                        top:50%;
+                        left:50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        text-align: center;
+                        }
+
+
+
+@media(min-width:520px){
+        .banner h1{
+                font-size:30px
+        }
+
+.grid {display: grid;
+grid-gap: 10px;
+grid-template-columns:repeat(2,1fr);
+}
+
+.sucursales .sucursales__grid {
+        grid-template-columns:repeat(3,1fr);
+}
+
+.sucursal__columnma {
+        border-radius: 50%; text-align: center;
+}
+.info .contenedor { grid-template-columns:repeat(3,150px); justify-content: space-around;}
+}
+
+@media(min-width:728px){
+
+        .sucursales .sucursales__grid {
+                grid-template-columns:repeat(3,180px); justify-content: space-around;
+        }   
+}
+
+@media(min-width:1024px){
+        .contenedor { width: 900px; }
+}
